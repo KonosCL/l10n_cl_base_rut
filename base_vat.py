@@ -19,7 +19,7 @@ class res_partner(models.Model):
                     ('id','!=', r.id),
                     ('parent_id', '!=', r.id),
                 ])
-            if r.vat !="CL555555555" and partner:
+            if r.vat !="CL555555555" and partner and r.vat !="CL666666666":
                 raise UserError(_('El rut debe ser único'))
                 return False
 
